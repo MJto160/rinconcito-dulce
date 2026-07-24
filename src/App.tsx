@@ -31,10 +31,10 @@ function App() {
           console.log('PRODUCTOS SUPABASE:', productsRes.data);
   const fixedProducts = productsRes.data.map((product) => {
     const imageFixes: Record<string, string> = {
-      'Cupcakes Red Velvet': '/images/cupcakes_red_velvet.jpg',
-      'Tiramisú Clásico': '/images/tiramisu_clasico.jpg',
-      'Pastel de Zanahoria': '/images/pastel_zanahoria.jpg',
-      'Cheesecake de Frutos Rojos': '/images/cheesecake_frutos_rojos.jpg',
+      'Cupcakes Red Velvet': `${import.meta.env.BASE_URL}images/cupcakes_red_velvet.jpg`,
+      'Tiramisú Clásico': `${import.meta.env.BASE_URL}images/tiramisu_clasico.jpg`,
+      'Pastel de Zanahoria': `${import.meta.env.BASE_URL}images/pastel_zanahoria.jpg`,
+      'Cheesecake de Frutos Rojos': `${import.meta.env.BASE_URL}images/cheesecake_frutos_rojos.jpg`,
     };
 
     return {
