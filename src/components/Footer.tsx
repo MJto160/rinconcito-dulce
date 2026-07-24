@@ -34,7 +34,7 @@ export default function Footer() {
           <div className="sm:col-span-2 lg:col-span-1">
             <a href="#inicio" className="flex items-center gap-3 mb-6">
                 <img 
-                src="/images/logotipo sin fondo.png" 
+                src={`${import.meta.env.BASE_URL}images/logotipo_sin_fondo.png`} 
                 alt="Logotipo Rinconcito Dulce" 
                 className="w-12 h-12 object-contain" 
 />

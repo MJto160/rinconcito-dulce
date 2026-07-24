@@ -65,7 +65,7 @@ export default function Hero() {
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#f9ebe5] via-[#fde68a]/30 to-[#e9b4a0]/40 animate-pulse" style={{ animationDuration: '4s' }} />
 
               <img
-                src="/images/taartaleta_de_frutas.jpg"
+                src={`${import.meta.env.BASE_URL}images/taartaleta_de_frutas.jpg`}
                 alt="Pastel artesanal decorado"
                 className="relative w-full h-full object-cover rounded-3xl shadow-warm-lg"
               />
