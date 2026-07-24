@@ -38,7 +38,7 @@ export default function Header({ cartCount, onCartClick }: HeaderProps) {
         <div className="flex items-center justify-between">
           <a href="#inicio" className="flex items-center gap-3 group">
             <img 
-  src="/images/logotipo sin fondo.png" 
+  src="/images/logotipo_sin_fondo.png"
   alt="Logotipo Rinconcito Dulce" 
   className="w-12 h-12 object-contain" 
 />
