@@ -27,7 +27,23 @@ function App() {
           supabase.from('testimonials').select('*').order('created_at', { ascending: false }),
         ]);
 
-        if (productsRes.data) setProducts(productsRes.data);
+        if (productsRes.data) {
+  const fixedProducts = productsRes.data.map((product) => {
+    const imageFixes: Record<string, string> = {
+      'Cupcakes Red Velvet': '/images/cupcakes_red_velvet.jpg',
+      'Tiramisú Clásico': '/images/tiramisu_clasico.jpg',
+      'Pastel de Zanahoria': '/images/pastel_zanahoria.jpg',
+      'Cheesecake de Frutos Rojos': '/images/cheesecake_frutos_rojos.jpg',
+    };
+
+    return {
+      ...product,
+      image_url: imageFixes[product.name] || product.image_url,
+    };
+  });
+
+  setProducts(fixedProducts);
+}
         if (testimonialsRes.data) setTestimonials(testimonialsRes.data);
       } catch (error) {
         console.error('Error fetching data:', error);
