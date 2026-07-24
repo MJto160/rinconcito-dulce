@@ -28,6 +28,7 @@ function App() {
         ]);
 
         if (productsRes.data) {
+          console.log('PRODUCTOS SUPABASE:', productsRes.data);
   const fixedProducts = productsRes.data.map((product) => {
     const imageFixes: Record<string, string> = {
       'Cupcakes Red Velvet': '/images/cupcakes_red_velvet.jpg',
